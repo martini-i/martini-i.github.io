@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Martin Nguyen</title>
+  <meta name="description" content="Martin Nguyen — computer science student at CSUF building applied ML, cloud and robotics projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="wrap hero">
+    <p class="mono kicker">hi, I'm</p>
+    <h1>Martin Nguyen</h1>
+    <nav class="links">
+      <a class="btn primary" href="https://github.com/martini-i">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/martin-nguyen-a26021257">LinkedIn</a>
+      <a class="btn" href="#projects">Projects</a>
+      <a class="btn" href="#experience">Experience</a>
+      <a class="btn" href="#skills">Skills</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="featured">
+      <h2 class="mono">// featured</h2>
+      <article class="featured card">
+        <div>
+          <p class="tag">Undergraduate research · CSUF · 2026–present</p>
+          <h3>GroundTruth</h3>
+          <p>
+            A computer-vision classifier that flags visible slope-instability indicators
+            (cracks, scarps, loose debris) in ground-level photos. It runs a frozen CLIP ViT-L/14
+            backbone with test-time augmentation and a calibrated logistic-regression probe. A
+            SegFormer input gate strips out sky and water and refuses photos the model can't assess.
+            The 200-image dataset is labelled by site, so evaluation measures generalization rather
+            than memorization.
+          </p>
+          <ul class="stats">
+            <li><span>85.1%</span>accuracy, site-grouped 5-fold CV</li>
+            <li><span>0.944</span>ROC AUC</li>
+            <li><span>92.9%</span>of unstable slopes flagged at 81.2% precision</li>
+          </ul>
+          <ul class="chips">
+            <li>Python</li><li>PyTorch</li><li>Hugging Face</li><li>scikit-learn</li><li>FastAPI</li>
+            <li>React + Vite</li><li>Kotlin / Android</li><li>CI + tests</li>
+          </ul>
+          <a class="more" href="https://github.com/martini-i/GroundTruth">View repository →</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="projects">
+      <h2 class="mono">// projects</h2>
+      <div class="grid">
+        <a class="card" href="https://github.com/KshitijPingle/unitree_go2_house_nav">
+          <p class="tag">Robotics · capstone · ECS Expo 2026 finalist</p>
+          <h3>Unitree Go2 Autonomous Exploration</h3>
+          <p>Autonomous multi-room exploration for a Unitree Go2 quadruped robot, with no manual waypoints and 90% map coverage across residential floor plans. I led a team of 4 and built the real-time safety layer, which uses LiDAR obstacle detection to override velocity commands. ECS Expo finalist out of 171 teams.</p>
+          <ul class="chips"><li>ROS 2</li><li>Nav2</li><li>SLAM</li><li>LiDAR</li><li>Python</li></ul>
+        </a>
+        <a class="card" href="https://github.com/martini-i/sleep-risk-predictor">
+          <p class="tag">Machine learning</p>
+          <h3>Sleep Risk Predictor</h3>
+          <p>A notebook that explores a sleep-health dataset and models sleep-disorder risk from lifestyle and health measures.</p>
+          <ul class="chips"><li>Python</li><li>Jupyter</li><li>pandas</li></ul>
+        </a>
+        <a class="card" href="https://github.com/auhlz/465project">
+          <p class="tag">Cloud · team project</p>
+          <h3>Meeting Audio Summarizer</h3>
+          <p>A serverless pipeline that transcribes meeting recordings with Amazon Transcribe and summarizes them with Claude on Amazon Bedrock. S3 triggers and SQS queues drive the processing.</p>
+          <ul class="chips"><li>AWS Lambda</li><li>S3 / SQS</li><li>Bedrock</li></ul>
+        </a>
+        <a class="card" href="https://github.com/martini-i/cpsc471-ftp">
+          <p class="tag">Networking</p>
+          <h3>FTP Client &amp; Server</h3>
+          <p>A simplified FTP client and server over raw TCP sockets, with separate control and data connections for file transfer.</p>
+          <ul class="chips"><li>Python</li><li>Sockets</li><li>TCP</li></ul>
+        </a>
+        <a class="card" href="https://github.com/martini-i/algorithm-visualization">
+          <p class="tag">Algorithms</p>
+          <h3>Sorting Algorithm Visualizer</h3>
+          <p>A desktop app that animates and times bubble, merge, quick, and LSD/MSD radix sort side by side.</p>
+          <ul class="chips"><li>Python</li><li>Tkinter</li><li>Matplotlib</li></ul>
+        </a>
+        <a class="card" href="https://github.com/martini-i/huffmangui">
+          <p class="tag">Algorithms</p>
+          <h3>Huffman Coding GUI</h3>
+          <p>Builds a Huffman tree from character frequencies with a min-heap, then encodes and decodes text through a graphical interface.</p>
+          <ul class="chips"><li>Python</li><li>Heaps</li><li>Tkinter</li></ul>
+        </a>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="mono">// experience</h2>
+      <ol class="timeline">
+        <li>
+          <div class="when mono">Oct 2026 – now</div>
+          <div><h3>Software / IT Intern</h3><p class="org">Moulton Niguel Water District</p>
+          <p>Writes PowerShell scripts that automate new-PC setup, maintains the District's storage servers and supports cybersecurity practices for critical water infrastructure.</p></div>
+        </li>
+        <li>
+          <div class="when mono">Jan 2026 – now</div>
+          <div><h3>Undergraduate Researcher</h3><p class="org">California State University, Fullerton</p>
+          <p>Builds GroundTruth: dataset, model, error audits, FastAPI backend, web and Android clients, and CI.</p></div>
+        </li>
+        <li>
+          <div class="when mono">Jan – May 2026</div>
+          <div><h3>Software Engineer Capstone Intern</h3><p class="org">Month2Month</p>
+          <p>Led the Unitree Go2 autonomous exploration team, an ECS Expo 2026 finalist.</p></div>
+        </li>
+        <li>
+          <div class="when mono">Expected Jan 2027</div>
+          <div><h3>B.S. Computer Science, Minor in Data Science</h3><p class="org">California State University, Fullerton</p>
+          <p>GPA 3.73 · Dean's List 2023–2026</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills">
+      <h2 class="mono">// skills</h2>
+      <dl class="skills">
+        <div><dt>Languages</dt><dd>Python, C++, Java, JavaScript, Kotlin, PowerShell, HTML/CSS, SQL</dd></div>
+        <div><dt>ML &amp; vision</dt><dd>PyTorch, scikit-learn, Hugging Face, computer vision</dd></div>
+        <div><dt>Robotics</dt><dd>ROS 2, Nav2, SLAM, LiDAR</dd></div>
+        <div><dt>Web, cloud &amp; tools</dt><dd>FastAPI, React, REST APIs, AWS, Docker, Git, Linux, CI</dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p class="mono">© <span id="y">2026</span> Martin Nguyen · <a href="https://github.com/martini-i">github.com/martini-i</a></p>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
